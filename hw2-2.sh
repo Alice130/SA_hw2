@@ -5,7 +5,7 @@ WIDTH=60
 OPTION_HEIGHT=6
 
 
-initail_pwd=$(pwd)
+initial_pwd=$(pwd)
 
 while :
 do
