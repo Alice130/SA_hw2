@@ -72,14 +72,14 @@ case $choice in
 			do	 
 				file_type_d=$(file --mime-type -b $choice | grep "directory" | awk '{if ($1 != "") print "true";}')
 				file_type_t=$(file -b $choice | grep "text" | awk '{if ($1 != "") print "true";}')
-				if [ $file_type_d == "true" ]; then
+				if [ "$file_type_d" == "true" ]; then
 					cd $choice
 					break
 				fi
 
 				info=$(file -b $choice)
 				size=$(du -h $choice | awk '{print $1}')
-				if [ $file_type_t == "true" ]; then
+				if [ "$file_type_t" == "true" ]; then
 					while :
 					do
 						dialog --extra-button --extra-label "Edit" --msgbox "<File Name>: $choice \n<File Info>: $info \n<File size>: $size \n" $HEIGHT $WIDTH
@@ -102,5 +102,5 @@ esac
 
 done
 
-clear
+#clear
 
