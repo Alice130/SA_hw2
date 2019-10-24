@@ -82,7 +82,7 @@ case $choice in
 				if [ $file_type_t == "true" ]; then
 					while :
 					do
-						dialog --extra-button --extra-label "Edit" --msgbox "<ile Name>: $choice \n<File Info>: $info \n<File size>: $size \n" $HEIGHT $WIDTH
+						dialog --extra-button --extra-label "Edit" --msgbox "<File Name>: $choice \n<File Info>: $info \n<File size>: $size \n" $HEIGHT $WIDTH
 						if [ $? == 3 ]; 
 						then
 							$EDITOR $choice
